@@ -1,0 +1,26 @@
+mixin reviews(modifier)
+  section.reviews
+    .reviews__container.container
+      .reviews__head
+        h2.reviews__title.title Отзывы учеников
+        .reviews__block
+          h3 Хотите так же? Действуйте!
+          p Если вы уже прошли наш курс, пожалуйста, оставьте свой отзыв на нашем сайте. Мы очень ценим ваше мнение и всегда стремимся улучшить наши продукты. Ваш отзыв поможет другим людям сделать правильный выбор и достичь успеха в своей жизни. Будем рады услышать ваши комментарии и предложения!
+
+      .reviews__body
+        .reviews__slider.swiper-container
+          .reviews__list.swiper-wrapper
+            .swiper-slide.reviews__item.review
+              img(src="img/rev1.png" alt="")
+            .swiper-slide.reviews__item.review
+              img(src="img/rev2.png" alt="")
+            .swiper-slide.reviews__item.review
+              img(src="img/rev3.png" alt="")
+            .swiper-slide.reviews__item.review
+              img(src="img/rev4.png" alt="")
+        .reviews__nav
+          .reviews__pagination.swiper-pagination-vertical
+      img(src="./img/r01.png", alt="", class="object object--1", data-value="12")
+      img(src="./img/r02.png", alt="", class="object object--2", data-value="-6")
+      img(src="./img/r03.png", alt="", class="object object--3", data-value="4")
+      

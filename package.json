@@ -1,0 +1,80 @@
+{
+  "name": "landing",
+  "version": "1.0.0",
+  "main": "gulp.js",
+  "license": "MIT",
+  "engines": {
+    "node": "18.14.0"
+  },
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "prod": "gulp prod",
+    "stylelint": "stylelint 'src/**/*.{css,scss}'",
+    "stylelint:fix": "stylelint --fix 'src/**/*.{css,scss}'"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.14",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-decomment": "^0.2.2",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sharp-responsive": "^0.4.0",
+    "gulp-size": "^4.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp-html-fixed": "^1.0.0",
+    "postcss": "^8.4.21",
+    "postcss-bgimage": "^2.1.3",
+    "postcss-load-config": "^4.0.1",
+    "pump": "^3.0.0",
+    "sass": "^1.56.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-recommended-scss": "^8.0.0",
+    "stylelint-order": "^6.0.1",
+    "sugarss": "^4.0.1",
+    "webp-in-css": "^0.8.0"
+  },
+  "dependencies": {
+    "fs-extra": "^11.1.0",
+    "gulp-htmlmin": "^5.0.1",
+    "postcss-scss": "^4.0.6"
+  },
+  "postcss": {
+    "parser": "sugarss",
+    "map": false
+  },
+  "overrides": {
+    "micromatch": "^4.0.5",
+    "extglob": "^3.0.0",
+    "snapdragon": "^0.12.1",
+    "expand-brackets": "^4.0.0",
+    "ua-parser-js": "^1.0.33",
+    "chokidar": "^3.5.3",
+    "uuid": "^7.0.0",
+    "glob-parent": "^5.1.2",
+    "glob-watcher": "5.0.5",
+    "svgo": "^3.0.2",
+    "http-cache-semantics": "^4.1.1",
+    "braces": "^3.0.2",
+    "semver-regex": "^4.0.3",
+    "findup-sync": "^5.0.0",
+    "anymatch": "^3.1.3",
+    "download": "^8.0.0",
+    "sharp": "^0.30.5",
+    "webpcssfix": {
+      "postcss": "7.0.36"
+    }
+  }
+}

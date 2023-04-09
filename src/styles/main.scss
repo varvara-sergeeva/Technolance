@@ -1,0 +1,166 @@
+@import "./fonts";
+@import "./normalize";
+@import "./variables";
+@import "./mixins";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Gothic A1', sans-serif;
+  box-sizing: border-box;
+  background-color: $back;
+}
+
+main {
+  position: relative;
+  @media (min-width: 998px) {
+    background:
+      radial-gradient(34.67% 8.16% at 89.71% 29.25%, rgba(39, 125, 104, 0.85) 0%, rgba(59, 56, 113, 0) 100%),
+      radial-gradient(56.15% 9.75% at 80.76% 57.07%, rgba(73, 116, 225, 0.55) 0%, rgba(56, 89, 113, 0) 99.86%),
+      radial-gradient(40.29% 13.22% at 5.39% 41.32%, rgba(125, 39, 122, 0.85) 0%, rgba(59, 56, 113, 0) 100%),
+      radial-gradient(50.31% 8.85% at 12.71% 67.97%, rgba(225, 73, 210, 0.55) 0%, rgba(56, 89, 113, 0) 99.86%);
+  }
+  @media (max-width: 998px) {
+    background:
+      radial-gradient(34.67% 8.16% at 89.71% 29.25%, rgba(39, 125, 104, 0.85) 0%, rgba(59, 56, 113, 0) 100%),
+      radial-gradient(56.15% 6.25% at 80.76% 57.07%, rgba(73, 116, 225, 0.55) 0%, rgba(56, 89, 113, 0) 99.86%),
+      radial-gradient(40.29% 10.22% at 5.39% 41.32%, rgba(125, 39, 122, 0.85) 0%, rgba(59, 56, 113, 0) 100%),
+      radial-gradient(50.31% 8.85% at 12.71% 67.97%, rgba(225, 73, 210, 0.55) 0%, rgba(56, 89, 113, 0) 99.86%);
+  }
+  @media (max-width: 440px) {
+    background:
+      radial-gradient(40.15% 9.25% at 90.76% 60.07%, rgba(73, 116, 225, 0.55) 0%, rgba(56, 89, 113, 0) 99.86%),
+      radial-gradient(40.29% 10.22% at 5.39% 41.32%, rgba(125, 39, 122, 0.85) 0%, rgba(59, 56, 113, 0) 100%),
+      radial-gradient(50.31% 8.85% at 12.71% 67.97%, rgba(225, 73, 210, 0.55) 0%, rgba(56, 89, 113, 0) 99.86%);
+  }
+}
+
+main::before {
+  position: absolute;
+	pointer-events: none;
+  content: "";
+  z-index: 1;
+  width: 100%;
+  @media (min-width: 998px) {
+    padding-top: 1800px;
+    background: radial-gradient(23.78% 26.79% at 4.01% 61.62%, rgba(125, 39, 108, 0.5) 0%, rgba(59, 56, 113, 0) 100%),
+  }
+
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  line-height: 125%;
+  list-style-type: none;
+}
+picture {
+  display: flex;
+  img {
+    max-width: 100%;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: $white;
+}
+section:first-of-type {
+  padding-top: $header-height;
+  @media (max-width: 998px) {
+    padding-top: $header-height-m;
+  }
+}
+.title {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 125%;
+  @media (max-width: 998px) {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 125%;
+  }
+  @media (max-width: 640px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+.gradient-gray {
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.65) 65.1%, rgba(255, 255, 255, 0.65) 82.81%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.gradient-gift {
+  background: linear-gradient(180deg, #0989FF 0%, #2DD6FB 29.6%, #FF31D2 58%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.gradient-title {
+  background: linear-gradient(180deg, #6333AD 0%, #C71B9E 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+#app {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+.swiper-container {
+  overflow: hidden;
+}
+.swiper-pagination {
+  opacity: 0;
+}
+
+@media (max-width: 998px) {
+  section:first-of-type {
+    padding-top: $header-height-m;
+  }
+  .swiper-pagination:is(div) {
+    position: static;
+    justify-content: center;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet:is(span) {
+    width: 10px;
+    height: 10px;
+    background: #17121d;
+    opacity: 1;
+    transition: 0.3s;
+    border: 0;
+  }
+  .swiper-pagination-bullet + .swiper-pagination-bullet {
+    margin-left: 8px;
+  }
+  .swiper-pagination-bullet-active:is(span) {
+    background: #5f38ff;
+    opacity: 1;
+  }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: none;
+}

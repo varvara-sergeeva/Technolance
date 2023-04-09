@@ -1,0 +1,6 @@
+mixin form(title, cls)
+	form(action="/order" method="POST" class=cls).form
+			.form__input.input-wrap
+					input(placeholder="Ваш email" name="order[email]" class="email form-block" type="email" required).form__input#email
+			.basket__content
+					button(type="submit").form__button Начать зарабатывать

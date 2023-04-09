@@ -1,0 +1,24 @@
+mixin footer(modifier)
+    footer.footer
+      .footer__info
+        .footer__contacts
+          p.footer__phone +7 (999) 999-99-99
+          p.footer__phone-desc Контактный центр
+          a.footer__email(href='mailto:support@some-mail.com') support@some-mail.com
+        ul.footer__links
+          li.footer__link
+            a(href='#' target='_blank')  О нашем проекте
+          li.footer__link
+            a(href='#' target='_blank')  Пользовательское соглашение
+          li.footer__link
+            a(href='#' target='_blank')  Политика конфиденциальности  
+          li.footer__link
+            a(href='#' target='_blank')  Политика обработки данных 
+          li.footer__link
+            a(href='#' target='_blank')  Условия использования продукта
+      .footer__bottom
+        .footer__name © Copyright, 2022
+        .footer__cookie
+          | Мы 
+          a(href='/docs/processing.pdf' target='_blank') используем файлы cookie
+          |  для персонализации сервисов и повышения удобств пользования сайтом. Если вы не согласны на их использование, поменяйте настройки браузера.

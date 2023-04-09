@@ -1,0 +1,259 @@
+.reviews {
+  position: relative;
+  padding: 75px 0;
+  background: radial-gradient(17.2% 32% at 71% 45.61%, rgba(73, 189, 225, 0.55) 0%, rgba(56, 89, 113, 0) 99.86%) ,
+              radial-gradient(22% 40% at 32% 39%, rgba(225, 73, 146, 0.55) 0%, rgba(56, 89, 113, 0) 99.86%);
+  background-repeat: no-repeat;
+
+  @media (max-width: 1500px) {
+    background: radial-gradient(16% 32% at 85% 45.61%, rgba(73, 189, 225, 0.55) 0%, rgba(56, 89, 113, 0) 99.86%) ,
+                radial-gradient(26% 40% at 24% 39%, rgba(225, 73, 146, 0.55) 0%, rgba(56, 89, 113, 0) 99.86%);
+  }
+  @media (max-width: 998px) {
+    background: none;
+  }
+    .container {
+      position: relative;
+      display: flex;
+      max-width: 1222px;
+      justify-content: space-between;
+      align-items: center;
+      .object {
+        max-width: none;
+        position: absolute;
+        object-fit: cover;
+        @media (max-width: 998px) {
+          display: none;
+        }
+      }
+      .object--1 {
+        top: 84%;
+        left: 12%;
+        @media (max-width: 1400px) {
+          left: 22%;
+        }
+      }
+      .object--2 {
+        top: 10%;
+        left: 46%;
+        @media (max-width: 1400px) {
+          top: 5%;
+          left: 48%;
+        }
+      }
+      .object--3 {
+        top: -10%;
+        left: -10%;
+        @media (max-width: 1400px) {
+          left: 0%;
+        }
+      }
+    }
+    &__head {
+      position: relative;
+      max-width: 585px;
+      margin-right: 20px;
+      padding-bottom: 100px;
+      @media (max-width: 998px) {
+        background-image: url("../img/sl4.png"), url("../img/r01.png");
+        background-repeat: no-repeat;
+        background-position: top 20px right, top -10px left 20px;
+        background-size: auto, 20% auto;
+      }
+    }
+    h2 {
+      @include gray-text;
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 96px;
+      line-height: 120px;
+      text-align: center;
+    }
+    &__block {
+      position: relative;
+      width: 100%;
+      padding: 40px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+      background-image: url("../img/block.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        top: -2px;
+        left: -2px;
+        z-index: -1;
+        background: linear-gradient(180deg, #0989FF 0%, #2DD6FB 29.6%, #FF31D2 58%);
+        border-radius: 20px;
+      }
+      h3 {
+        margin-bottom: 10px;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 53px;
+        text-align: center;
+        @include gray-text;
+      }
+      p {
+        @include gray-text;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+
+  @media (max-width: 998px) {
+    padding: 50px 0;
+    .container {
+      position: relative;
+      display: block;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    &__head {
+      position: initial;
+      max-width: none;
+      margin-right: 0px;
+      margin-bottom: 13px;
+      padding-bottom: 0px;
+    }
+    h2 {
+      position: relative;
+      max-width: 280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      font-size: 32px;
+      line-height: 35px;
+      box-sizing: border-box;
+    }
+    &__nav {
+      display: none;
+    }
+    &__block {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      max-width: 500px;
+      width: 100%;
+      transform: translate(-50%, 0);
+      padding: 40px 15px 40px;
+      box-sizing: border-box;
+      box-shadow: 0px 4px 15px 0px rgba(90, 35, 87, 1);
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #17121d;
+        background-image: url("../img/sl4.png"), url("../img/r02.png");
+        background-repeat: no-repeat;
+        background-position: top 50px right 10px, left top 20px;
+        background-size: auto, 20%;
+        border-radius: 20px;
+        z-index: 0;
+      }
+      h3 {
+        font-size: 32px;
+        line-height: 35px;
+        z-index: 2;
+      }
+      p {
+        z-index: 2;
+        font-size: 14px;
+        padding: 15px 15px 0px 15px;
+        font-weight: 400;
+        line-height: 19px;
+      }
+    }
+  }
+  @media (max-width: 440px) {
+    h3 {
+      max-width: 150px;
+    }
+    &__block {
+      width: 290px;
+      padding: 15px 15px 30px 15px;
+      &::before {
+        width: 294px;
+      }
+      &::after {
+        width: 290px;
+        background-position: top 50px right 20px, left 20px top 20px;
+      }
+    }
+  }
+}
+
+// swiper style
+.reviews__body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  @media (max-width: 998px) {
+    max-width: none;
+    width: auto;
+    flex-direction: column;
+    padding-bottom: 340px;
+    gap: 0px;
+  }
+  @media (max-width: 520px) {
+    padding-bottom: 380px;
+  }
+
+  img {
+    @media (max-width: 998px) {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+}
+.reviews__slider.swiper-container {
+  width: 100%;
+  height: 842px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 998px) {
+    height: 700px;
+  }
+  @media (max-width: 350px) {
+    height: 600px;
+  }
+}
+.swiper-slide.swiper-slide {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-pagination-bullets .swiper-pagination-bullet {
+  background-color: rgba(51, 122, 173, 0.55);
+  opacity: 1;
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.5);
+}
+.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  background-color: #0094FF;
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+}
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: var(--swiper-pagination-bullet-vertical-gap, 13px) 0 !important;
+}

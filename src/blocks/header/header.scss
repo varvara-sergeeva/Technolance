@@ -1,0 +1,32 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: $header-height;
+  z-index: 10;
+  &__container {
+    display: flex;
+    max-width: 1480px;
+    height: inherit;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+  }
+  picture {
+    height: $header-height;
+  }
+  img {
+    max-width: 280px;
+  }
+  @media (max-width: 640px) {
+    height: $header-height-m;
+    picture {
+      height: $header-height-m;
+    }
+    img {
+      width: 150px;
+    }
+  }
+}

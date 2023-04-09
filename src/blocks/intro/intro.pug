@@ -1,0 +1,45 @@
+mixin intro(modifier)
+  section.intro.section
+    .intro__container.container
+      .intro__dec-img 
+        img(src="./img/in1.png", alt="", class="object object--1", data-value="-3")
+        img(src="./img/in2.png", alt="", class="object object--2", data-value="6")
+        img(src="./img/in3.png", alt="", class="object object--3", data-value="4")
+        img(src="./img/in4.png", alt="", class="object object--4", data-value="8")
+        img(src="./img/in5.png", alt="", class="object object--5", data-value="-3")
+        img(src="./img/in6.png", alt="", class="object object--6", data-value="6")
+      .intro__content
+        .intro__text
+          h1 Стране нужны <br>специалисты
+          p Поможем стать одним из них, учавствуйте в программе “Технофриланс”
+        .intro__image
+          picture
+            source(srcset="./img/intro-mob.webp, ./img/intro-mob-2.webp" media="(max-width: 640px)" type="image/webp")
+            source(srcset="./img/intro-mob.png, ./img/intro-mob-2.png" media="(max-width: 640px)"  type="image/png")
+            source(srcset="./img/intro-tab.webp, ./img/intro-tab-2.webp" media="(max-width: 998px)" type="image/webp")
+            source(srcset="./img/intro-tab.png, ./img/intro-tab-2.png" media="(max-width: 998px)"  type="image/png")
+            source(srcset="./img/intro-desc.webp, ./img/intro-desc-2.webp" type="image/webp")
+            img(class="intro__img" src="./img/intro-desc.png", alt="" srcset="./img/intro-desc-2.png")
+        .intro__gift.gift
+          picture
+            source(srcset="./img/gift.webp" type="image/webp")
+            img(class="gift__img animate" src="./img/gift.png" alt="подарок для вас" width="95")
+          .gift__text.gift__text--intro
+            h3.gradient-gift В подарок
+            p Инструкция к первому заказу на&nbsp;фрилансе
+        .intro__row
+          .intro__btn
+            .btn__body
+              a.btn.gradient(href="#") Начать программу
+            .btn__shadow
+              .btn--inner.gradient
+
+        ul.intro__list
+          li.intro__item 
+            p Свободный график
+          li.intro__item 
+            p Работа в удовольствие
+          li.intro__item 
+            p Из любой точки мира
+          li.intro__item 
+            p С заработком от 100 000₽

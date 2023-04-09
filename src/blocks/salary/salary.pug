@@ -1,0 +1,32 @@
+mixin salary(modifier)
+  section.salary.section.paralax
+    .salary__container.container
+      .salary__dec-img
+        img(src="./img/sl1.png", alt="", class="object object--1", data-value="-3")
+        img(src="./img/sl2.png", alt="", class="object object--2", data-value="6")
+        img(src="./img/sl3.png", alt="", class="object object--3", data-value="4")
+        img(src="./img/sl4.png", alt="", class="object object--4", data-value="8")
+        img(src="./img/sl5.png", alt="", class="object object--5", data-value="-5")
+        img(src="./img/sl6.png", alt="", class="object object--6", data-value="4")
+      h2.salary__title.title Средний заработок  <span class="gradient-title">на фрилансе</span>
+      .salary__body.swiper-container
+        .swiper-wrapper 
+          .salary__item.swiper-slide 
+            picture 
+              img(src="./img/junn.png", alt="")
+            .salary__text
+              p 70 000 ₽
+              p Junior-специалист
+          .salary__item.swiper-slide
+            picture 
+              img(src="./img/mid.png", alt="")
+            .salary__text
+              p 120 000 ₽
+              p Middle-специалист
+          .salary__item.swiper-slide
+            picture 
+              img(src="./img/senior.png", alt="")
+            .salary__text
+              p 160 000 ₽
+              p Senior-специалист
+        .swiper-pagination
